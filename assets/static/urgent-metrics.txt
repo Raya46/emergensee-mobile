@@ -1,0 +1,228 @@
+CATEGORY_START
+NAME: KRITERIA GAWAT DARURAT ANAK
+METRICS_START
+1 | Anemia sedang / berat
+2 | Apnea / gasping
+3 | Bayi ikterus, anak ikterus
+4 | Bayi kecil/ premature
+5 | Cardiac arrest / payah jantung
+6 | Cyanotic Spell (penyakit jantung)
+7 | Diare profis (> 10/hari) disertai dehidrasi ataupun tidak
+8 | Difteri
+9 | Ditemukan bising jantung, aritmia
+10 | Edema / bengkak seluruh badan
+11 | Epitaksis, tanda pendarahan lain disertai febris
+12 | Gagal ginjal akut
+13 | Gangguan kesadaran, fungsi vital masih baik
+14 | Hematuri
+15 | Hipertensi Berat
+16 | Hipotensi / syok ringan s/d sedang
+17 | Intoksikasi (minyak tanah, baygon) keadaan umum masih baik
+18 | Intoksikasi disertai gangguan fungsi vital (minyak tanah, baygon)
+19 | Kejang disertai penurunan kesadaran
+20 | Muntah profis (> 6 hari) disertai dehidrasi atau tidak
+21 | Panas tinggi >400 C
+22 | Sangat sesak, gelisah, kesadaran menurun, sianosis ada retraksi hebat (penggunaan otot pernafasan sekunder)
+23 | Sesak tapi kesadaran dan keadaan umum masih baik
+24 | Shock berat (profound) : nadi tidak teraba tekanan darah terukur termasuk DSS.
+25 | Tetanus
+26 | Tidak kencing > 8 jam
+27 | Tifus abdominalis dengan komplikasi
+METRICS_END
+CATEGORY_END
+
+CATEGORY_START
+NAME: KRITERIA GAWAT DARURAT BEDAH
+METRICS_START
+1 | Abses cerebri
+2 | Abses sub mandibula
+3 | Amputasi penis
+4 | Anuria
+5 | Apendicitis acute
+6 | Atresia ani (tidak bisa BAB sama sekali)
+7 | BPH dengan retensio urin
+8 | Cedera kepala berat
+9 | Cedera kepala sedang
+10 | Cedera tulang belakang (vertebral)
+11 | Cedera wajah dengan gangguan jalan nafas
+12 | Cedera wajah tanpa gangguan jalan nafas, antara lain :
+12a | Patah tulang hidung/nasal terbuka dan tertutup
+12b | Patah tulang pipi (zygoma) terbuka dan tertutup
+12c | Patah tulang rahang (maxilla dan mandibula) terbuka dan tertutup
+12d | Luka terbuka daerah wajah
+13 | Cellulitis
+14 | Cholesistitis akut
+15 | Corpus alienum pada :
+15a | Intra cranial
+15b | Leher
+15c | Thorax
+15d | Abdomen
+15e | Anggota gerak
+15f | Genetalia
+16 | CVA bleeding
+17 | Dislokasi persendian
+18 | Drowning
+19 | Flail chest
+20 | Fraktur tulang kepala
+21 | Gastrokikis
+22 | Gigitan binatang / manusia
+23 | Hanging
+24 | Hematothorax dan pneumothorax
+25 | Hematuria
+26 | Hemoroid grade IV (dengan tanda strangulasi)
+27 | Hernia incarcerate
+28 | Hidrochepalus dengan TIK meningkat
+29 | Hirschprung disease
+30 | Ileus Obstruksi
+31 | Internal Bleeding
+32 | Luka Bakar
+33 | Luka terbuka daerah abdomen
+34 | Luka terbuka daerah kepala
+35 | Luka terbuka daerah thorax
+36 | Meningokel / myelokel pecah
+37 | Multiple trauma
+38 | Omfalokel pecah
+39 | Pankreatitis akut
+40 | Patah tulang dengan dugaan cedera pembuluh darah
+41 | Patah tulang iga multiple
+42 | Patah tulang leher
+43 | Patah tulang terbuka
+44 | Patah tulang tertutup
+45 | Periappendicullata infiltrate
+46 | Peritonitis generalisata
+47 | Phlegmon dasar mulut
+48 | Priapismus
+49 | Prolaps rekti
+50 | Rectal bleeding
+51 | Ruptur otot dan tendon
+52 | Strangulasi penis
+53 | Tension pneumothoraks
+54 | Tetanus generalisata
+55 | Torsio testis
+56 | Tracheo esophagus fistel
+57 | Trauma tajam dan tumpul daerah leher
+58 | Trauma tumpul abdomen
+59 | Traumatik amputasi
+60 | Tumor otak dengan penurunan kesadaran
+61 | Unstable pelvis
+62 | Urosepsi
+METRICS_END
+CATEGORY_END
+
+CATEGORY_START
+NAME: KRITERIA GAWAT DARURAT KARDIOVASKULAR
+METRICS_START
+1 | Aritmia
+2 | Aritmia dan shock
+3 | Cor Pulmonale decompensata yang akut
+4 | Edema paru akut
+5 | Henti jantung
+6 | Hipertensi berat dengan komplikasi (hipertensi enchephalopati, CVA)
+7 | Infark Miokard dengan komplikasi (shock)
+8 | Kelainan jantung bawaan dengan gangguan ABC (Airway Breathing Circulation)
+9 | Kelainan katup jantung dengan gangguan ABC (airway Breathing Circulation)
+10 | Krisis hipertensi
+11 | Miokarditis dengan shock
+12 | Nyeri dada
+13 | Sesak nafas karena payah jantung
+14 | Syncope karena penyakit jantung
+METRICS_END
+CATEGORY_END
+
+KRITERIA GAWAT DARURAT KEBIDANAN
+POINT DARURAT | DIAGNOSA
+1 | Abortus
+2 | Distosia
+3 | Eklampsia
+4 | Kehamilan Ektopik Terganggu (KET)
+5 | Perdarahan Antepartum
+6 | Perdarahan Postpartum
+7 | Inversio Uteri
+8 | Febris Puerperalis
+9 | Hyperemesis gravidarum dengan dehidrasi
+10 |  Persalinan kehamilan risiko tinggi  
+dan atau persalinan dengan penyulit
+
+KRITERIA GAWAT DARURAT MATA
+POINT DARURAT | DIAGNOSA
+1 | Benda asing di kornea mata / kelopak mata
+2 | Blenorrhoe/ Gonoblenorrhoe
+3 | Dakriosistisis akut
+4 | Endoftalmitis/panoftalmitis
+5 | Glaukoma :
+    a. Akut
+    b. Sekunder
+6 | Penurunan tajam penglihatan mendadak :
+    a. Ablasio retina
+    b. CRAO
+    c. Vitreous bleeding
+7 | Selulitis Orbita
+8 | Semua kelainan kornea mata :
+    a. Erosi
+    b. Ulkus / abses
+    c. Descematolis
+9 | Semua trauma mata :
+    a. Trauma tumpul
+    b. Trauma fotoelektrik/ radiasi
+    c. Trauma tajam/tajam tembus
+10 | Trombosis sinus kavernosis
+11 | Tumororbita dengan perdarahan
+12 | Uveitis/ skleritis/iritasi
+
+KRITERIA GAWAT DARURAT PARU-PARU
+POINT DARURAT | DIAGNOSA
+1 | Asma bronchitis moderate severe
+2 | Aspirasi pneumonia
+3 | Emboli paru
+4 | Gagal nafas
+5 | Injury paru
+6 | Massive hemoptisis
+7 | Massive pleural effusion
+8 | Oedema paru non cardiogenic
+9 | Open/closed pneumathorax
+10 | P.P.O.M Exacerbasi akut
+11 | Pneumonia sepsis
+12 | Pneumathorax ventil
+13 | Reccurent Haemoptoe
+14 | Status Asmaticus
+15 | Tenggelam
+
+KRITERIA GAWAT DARURAT PENYAKIT DALAM 
+POINT DARURAT | DIAGNOSA
+1  | Demam berdarah dengue (DBD)
+2  | Demam tifoid
+3  | Difteri
+4  | Disequilebrium pasca HD
+5  | Gagal ginjal akut
+6  | GEA dan dehidrasi
+7  | Hematemesis melena
+8  | Hematochezia
+9  | Hipertensi maligna
+10 | Keracunan makanan
+11 | Keracunan obat
+12 | Koma metabolic
+13 | Leptospirosis
+14 | Malaria
+15 | Observasi shock
+
+KRITERIA GAWAT DARURAT THT
+POINT DARURAT | DIAGNOSA
+1 | Abses di bidang THT & kepala leher
+2 | Benda asing laring/trachea/bronkus, dan benda asing tenggorokan
+3 | Benda asing telinga dan hidung
+4 | Disfagia
+5 | Obstruksi jalan nafas atas grade II/ III Jackson
+6 | Obstruksi jalan nafas atas grade IV Jackson
+7 | Otalgia akut (apapun penyebabnya)
+8 | Parese fasialis akut
+9 | Perdarahan di bidang THT
+10 | Syok karena kelainan di bidang THT
+11 | Trauma (akut) di bidang THT ,Kepala dan Leher
+12 | Tuli mendadak
+13 | Vertigo (berat)
+
+KRITERIA GAWAT DARURAT SYARAF
+POINT DARURAT | DIAGNOSA
+1 | Kejang
+2 | Stroke
+3 | Meningo enchepaliti

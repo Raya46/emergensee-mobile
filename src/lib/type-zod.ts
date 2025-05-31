@@ -11,10 +11,10 @@ export type AIStructuredOutputSchemaType = z.infer<
 >;
 
 export const SymptomReportDBSchema = z.object({
-  id: z.string().optional(),
+  id: z.string().uuid().optional(),
   userId: z.string(),
-  latitude: z.coerce.number().optional(),
-  longitude: z.coerce.number().optional(),
+  latitude: z.coerce.number(),
+  longitude: z.coerce.number(),
   complaint: z.string(),
   symptoms: z.array(z.string()).default([]),
   temperature: z.coerce.number().optional(),
@@ -23,9 +23,9 @@ export const SymptomReportDBSchema = z.object({
   bloodPressure: z.coerce.number().optional(),
   respiratoryRate: z.coerce.number().optional(),
   aiAnalysis: AIStructuredOutputSchema.optional(),
-  isEmergency: z.boolean().default(false),
-  createdAt: z.date().default(() => new Date()),
-  updatedAt: z.date().default(() => new Date()),
+  isEmergency: z.boolean().optional(),
+  createdAt: z.date().optional(),
+  updatedAt: z.date().optional(),
 });
 export type SymptomReportDBSchemaType = z.infer<typeof SymptomReportDBSchema>;
 
@@ -48,6 +48,7 @@ export const PatientDataForAIPromptSchema = z.object({
   respiratoryRate: z.string().optional(),
   temperature: z.string().optional(),
   oxygenSaturation: z.string().optional(),
+  heartRate: z.string().optional(),
   symptoms: z.array(z.string()).default([]),
   userId: z.string().optional(),
   latitude: z.coerce.number().optional(),

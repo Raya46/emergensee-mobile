@@ -158,7 +158,7 @@ const Onboarding = () => {
         activeDot={
           <View className="bg-emerald-500 w-3 h-3 rounded-full mx-1" />
         }
-        scrollEnabled={false}
+        scrollEnabled={true}
         paginationStyle={{
           top: 230,
           left: 0,

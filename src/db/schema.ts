@@ -5,10 +5,12 @@ import {
   pgTable,
   text,
   timestamp,
+  uuid,
 } from "drizzle-orm/pg-core";
 
 export const user = pgTable("user", {
   id: text("id").primaryKey(),
+  did: text("did"),
   name: text("name").notNull(),
   email: text("email").notNull().unique(),
   emailVerified: boolean("email_verified")
@@ -73,14 +75,14 @@ export const verification = pgTable("verification", {
 });
 
 export const symptomReports = pgTable("symptom_reports", {
-  id: text("id").primaryKey(),
+  id: uuid("id").defaultRandom().primaryKey(),
   userId: text("user_id")
     .notNull()
     .references(() => user.id, { onDelete: "cascade" }),
   latitude: decimal("latitude").notNull(),
   longitude: decimal("longitude").notNull(),
-  complaint: text("complaint").notNull(),
-  symptoms: text("symptoms").array().notNull(),
+  complaint: text("complaint"),
+  symptoms: text("symptoms").array(),
   temperature: decimal("temperature"),
   oxygenSaturation: decimal("oxygen_saturation"),
   heartRate: decimal("heart_rate"),

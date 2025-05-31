@@ -4,7 +4,7 @@
     "slug": "emergensee",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/emergensee.png",
     "scheme": "emergensee",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -12,11 +12,17 @@
       "supportsTablet": true
     },
     "android": {
+      "softwareKeyboardLayoutMode": "pan",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/emergensee.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.ray4.emergensee"
     },
     "web": {
       "bundler": "metro",
@@ -44,6 +50,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "07467fe5-f9e2-4854-b8ba-192ba8ae0561"
+      }
     }
   }
 }

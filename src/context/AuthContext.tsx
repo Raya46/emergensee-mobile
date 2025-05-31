@@ -9,6 +9,7 @@ import React, {
 
 interface User {
   id: string;
+  did?: string;
   name: string;
   email: string;
   role?: string | null;
@@ -43,7 +44,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           setIsAuthenticated(false);
         }
       } catch (e) {
-        console.error("Gagal memuat data pengguna dari storage", e);
+        console.log("Gagal memuat data pengguna dari storage", e);
         setUser(null);
         setIsAuthenticated(false);
       } finally {
@@ -61,7 +62,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(userData);
       setIsAuthenticated(true);
     } catch (e) {
-      console.error("Gagal menyimpan data pengguna ke storage", e);
+      console.log("Gagal menyimpan data pengguna ke storage", e);
     } finally {
       setIsLoading(false);
     }
@@ -74,7 +75,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(null);
       setIsAuthenticated(false);
     } catch (e) {
-      console.error("Gagal menghapus data pengguna dari storage", e);
+      console.log("Gagal menghapus data pengguna dari storage", e);
     } finally {
       setIsLoading(false);
     }

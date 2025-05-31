@@ -1,50 +1,11 @@
-import { authClient } from "@/src/auth-client";
 import CustomText from "@/src/components/custom-text";
-import { useAuth } from "@/src/context/AuthContext";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
 import { router, useLocalSearchParams } from "expo-router";
 import React from "react";
 import { Image, TouchableOpacity, View } from "react-native";
 
 const Dashboard = () => {
-  const { signOut } = useAuth();
   const params = useLocalSearchParams();
-  const handleLogout = async () => {
-    try {
-      await authClient.signOut();
-      console.log("Successfully signed out from backend.");
-
-      await AsyncStorage.multiRemove(["userSession", "userId"]);
-      console.log("User session and userId removed from AsyncStorage.");
-
-      if (signOut) {
-        signOut();
-        console.log("AuthContext signOut executed.");
-      } else {
-        console.warn("signOut function from AuthContext is not available.");
-      }
-
-      router.replace("/sign-in");
-    } catch (error) {
-      console.error("Error during sign out:", error);
-
-      try {
-        await AsyncStorage.multiRemove(["userSession", "userId"]);
-        if (signOut) {
-          signOut();
-        }
-        console.log("Local session cleanup attempted after error.");
-      } catch (cleanupError) {
-        console.error(
-          "Error during sign out cleanup after initial error:",
-          cleanupError
-        );
-      }
-
-      router.replace("/sign-in");
-    }
-  };
   return (
     <LinearGradient
       colors={["#D1FAE5", "#FFFFFF"]}
@@ -71,19 +32,27 @@ const Dashboard = () => {
         Hai, aku GenSee, AI Chatbot yang bisa bantu prediksi apakah kondisimu
         bisa dijamin BPJS atau tidak.
       </CustomText>
-      <TouchableOpacity
-        className="bg-emerald-600 px-8 py-3 rounded-xl w-full"
-        onPress={() =>
-          router.push({
-            pathname: "/main/chat",
-            params: { userId: params.userId },
-          })
-        }
+
+      <LinearGradient
+        colors={["#4FB2A3", "#30887C"]}
+        className="py-5 rounded-xl items-center mb-4 px-[7rem]"
+        style={{ borderRadius: 11 }}
+        locations={[0, 1]}
       >
-        <CustomText className="text-white text-lg font-semibold text-center">
-          Mulai Simulasi Klaim
-        </CustomText>
-      </TouchableOpacity>
+        <TouchableOpacity
+          className="w-full"
+          onPress={() =>
+            router.push({
+              pathname: "/main/chat",
+              params: { userId: params.userId },
+            })
+          }
+        >
+          <CustomText className="text-white font-bold">
+            Mulai Simulasi Klaim
+          </CustomText>
+        </TouchableOpacity>
+      </LinearGradient>
     </LinearGradient>
   );
 };

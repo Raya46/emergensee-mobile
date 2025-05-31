@@ -5,6 +5,7 @@ import { CreateSymptomReportToDBSchemaType } from "../lib/type-zod";
 export async function createSymptomReport(
   dataToSave: CreateSymptomReportToDBSchemaType
 ) {
+  console.log("[createSymptomReport] Data to save to DB:", dataToSave);
   try {
     const newSymptomReport = await db
       .insert(symptomReports)
@@ -12,9 +13,6 @@ export async function createSymptomReport(
       .returning({ id: symptomReports.id });
 
     if (!newSymptomReport || newSymptomReport.length === 0) {
-      console.error(
-        "[createSymptomReport] Gagal menyimpan laporan gejala ke database, tidak ada ID yang dikembalikan."
-      );
       return { error: "Gagal membuat laporan gejala di database." };
     }
 
@@ -24,10 +22,14 @@ export async function createSymptomReport(
     );
     return { success: true, symptomReportId: newSymptomReport[0].id };
   } catch (error) {
-    console.error("[createSymptomReport] Error saat insersi database:", error);
+    console.log("[createSymptomReport] Error saat insersi database:", error);
+    let errorMessage = "Gagal melakukan insersi ke database";
+    if (error instanceof Error) {
+      errorMessage += `: ${error.message}`;
+    }
     return {
-      error: "Gagal melakukan insersi ke database",
-      details: (error as Error).message,
+      error: errorMessage,
+      details: error instanceof Error ? error.stack : String(error),
     };
   }
 }

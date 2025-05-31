@@ -15,7 +15,7 @@ export const saveSession = async (session: UserSession): Promise<void> => {
     await AsyncStorage.setItem(SESSION_KEY, jsonValue);
     console.log("User session saved");
   } catch (e) {
-    console.error("Failed to save user session.", e);
+    console.log("Failed to save user session.", e);
   }
 };
 
@@ -32,7 +32,7 @@ export const loadSession = async (): Promise<UserSession | null> => {
       return null;
     }
   } catch (e) {
-    console.error("Failed to load user session.", e);
+    console.log("Failed to load user session.", e);
     return null;
   }
 };
@@ -42,6 +42,6 @@ export const clearSession = async (): Promise<void> => {
     await AsyncStorage.removeItem(SESSION_KEY);
     console.log("User session cleared.");
   } catch (e) {
-    console.error("Failed to clear user session.", e);
+    console.log("Failed to clear user session.", e);
   }
 };

@@ -1,50 +1,49 @@
-# Welcome to your Expo app 👋
+![Welcome](https://github.com/user-attachments/assets/55bcf9c4-3af9-43d5-8689-0a746c75dcaf)
+![Splash](https://github.com/user-attachments/assets/f93cba11-6922-48a8-afb9-b54495b24cdc)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+# EmergenSee Mobile
 
-1. Install dependencies
+**EmergenSee Mobile** adalah aplikasi mobile interaktif yang memberikan indikasi awal objektif dan transparan terkait potensi kriteria gawat darurat sesuai standar **BPJS Kesehatan** bagi pasien di **Instalasi Gawat Darurat (IGD)**. 
 
+---
+
+## ✨ Fitur Utama
+
+- **Input Tanda Vital**: Formulir ramah pengguna dengan validasi Zod.
+- **Local-First & Offline Mode**: Penyimpanan lokal via AsyncStorage, sinkronisasi otomatis saat online.
+- **Chatbot AI Personalisasi**: Prediksi klaim BPJS berdasarkan tanda vital menggunakan **Gemini** + **n8n Webhook**.
+- **Skor Urgensi BPJS**: Algoritma skor prioritas darurat untuk user.
+- **Autentikasi Aman**: Menggunakan `better-auth`.
+
+---
+
+## 🔧 Teknologi yang Digunakan
+
+- **React Native** (dengan **Expo**)  
+- **TailwindCSS** (melalui NativeWind)  
+- **better-auth** – Autentikasi pengguna  
+- **Neon Postgres** – Database serverless  
+- **Zod** – Validasi data tipe-aman  
+- **AsyncStorage** – Penyimpanan lokal  
+- **Gemini** – Model AI untuk prediksi  
+- **n8n Webhook** – Otomatisasi chatbot  
+
+---
+
+## 👨‍💻 Tim Pengembang (Tim Advadev)
+
+- **Ausath Abidzil**
+- **Aydie Rahma** 
+- **Kayla Alisha R.** 
+- **M. Raya Ar Rizki** 
+
+---
+
+## 🚀 Instalasi
+
+1. **Clone Repositori**
    ```bash
-   npm install
-   ```
+   git clone https://github.com/advadev/emergensee-mobile.git
+   cd emergensee-mobile
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.

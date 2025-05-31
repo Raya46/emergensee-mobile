@@ -118,7 +118,7 @@ export default function LoginScreen() {
 
         <LinearGradient
           colors={["#4FB2A3", "#30887C"]}
-          className="py-5 rounded-xl items-center mb-4 px-[7rem]"
+          className="py-5 rounded-xl items-center mb-4"
           style={{ borderRadius: 11 }}
           locations={[0, 1]}
         >
@@ -130,7 +130,9 @@ export default function LoginScreen() {
             {isLoading ? (
               <ActivityIndicator color="white" />
             ) : (
-              <CustomText className="text-white font-bold">Daftar</CustomText>
+              <CustomText className="text-white font-bold text-center">
+                Masuk
+              </CustomText>
             )}
           </TouchableOpacity>
         </LinearGradient>
